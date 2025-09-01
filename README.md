@@ -217,19 +217,8 @@ The full architecture includes:
 - **Advanced Lineage**: Deeper integration with data governance tools
 - **UI Dashboard**: Web interface for monitoring and management
 
-## 👥 Team
-
-Hackathon Team Fusion Optics
-### Members
-
-- Abhishek
-- Shrikar
-- Arjun
-
 ## 📜 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ---
-
-*This project was created during a hackathon event and represents a proof-of-concept implementation.*
