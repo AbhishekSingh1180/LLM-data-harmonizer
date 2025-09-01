@@ -1,0 +1,7 @@
+chemistry_pubchem:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: core/storage/duck_db/chemistry_pubchem.duckdb
+      schema: public

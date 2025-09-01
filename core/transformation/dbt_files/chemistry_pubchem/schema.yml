@@ -1,0 +1,174 @@
+version: 2
+models:
+- name: compounds
+  description: Model that transforms the `adme` seed into a standardized schema.
+  columns:
+  - name: compound_cid
+    description: Description of compound_cid
+    tests:
+    - not_null
+    - unique
+  - name: name
+    description: Description of name
+    tests:
+    - not_null
+  - name: iupac_name
+    description: Description of iupac_name
+    tests:
+    - not_null
+  - name: smiles
+    description: Description of smiles
+    tests:
+    - not_null
+  - name: inchi
+    description: Description of inchi
+    tests:
+    - not_null
+  - name: inchikey
+    description: Description of inchikey
+    tests:
+    - not_null
+  - name: molecular_weight
+    description: Description of molecular_weight
+    tests:
+    - not_null
+  - name: molecular_formula
+    description: Description of molecular_formula
+    tests:
+    - not_null
+  - name: polar_area
+    description: Description of polar_area
+    tests:
+    - not_null
+  - name: complexity
+    description: Description of complexity
+    tests:
+    - not_null
+  - name: xlogp
+    description: Description of xlogp
+    tests:
+    - not_null
+  - name: heavy_atom_count
+    description: Description of heavy_atom_count
+    tests:
+    - not_null
+  - name: hbond_donor_count
+    description: Description of hbond_donor_count
+    tests:
+    - not_null
+  - name: hbond_acceptor_count
+    description: Description of hbond_acceptor_count
+    tests:
+    - not_null
+  - name: rotatable_bond_count
+    description: Description of rotatable_bond_count
+    tests:
+    - not_null
+  - name: exact_mass
+    description: Description of exact_mass
+    tests:
+    - not_null
+  - name: monoisotopic_mass
+    description: Description of monoisotopic_mass
+    tests:
+    - not_null
+  - name: charge
+    description: Description of charge
+    tests:
+    - not_null
+  - name: covalent_unit_count
+    description: Description of covalent_unit_count
+    tests:
+    - not_null
+  - name: isotopic_atom_count
+    description: Description of isotopic_atom_count
+    tests:
+    - not_null
+  - name: total_atom_stereo_count
+    description: Description of total_atom_stereo_count
+    tests:
+    - not_null
+  - name: defined_atom_stereo_count
+    description: Description of defined_atom_stereo_count
+    tests:
+    - not_null
+  - name: undefined_atom_stereo_count
+    description: Description of undefined_atom_stereo_count
+    tests:
+    - not_null
+  - name: total_bond_stereo_count
+    description: Description of total_bond_stereo_count
+    tests:
+    - not_null
+  - name: defined_bond_stereo_count
+    description: Description of defined_bond_stereo_count
+    tests:
+    - not_null
+  - name: undefined_bond_stereo_count
+    description: Description of undefined_bond_stereo_count
+    tests:
+    - not_null
+  - name: create_date
+    description: Description of create_date
+    tests:
+    - not_null
+  - name: data_source
+    description: Description of data_source
+    tests:
+    - not_null
+  - name: data_source_category
+    description: Description of data_source_category
+    tests:
+    - not_null
+- name: synonyms
+  description: Model that transforms the `adme` seed into a standardized schema.
+  columns:
+  - name: compound_cid
+    description: Description of compound_cid
+    tests:
+    - not_null
+    - unique
+  - name: synonym
+    description: Description of synonym
+    tests:
+    - not_null
+    - unique
+- name: mesh_headings
+  description: Model that transforms the `adme` seed into a standardized schema.
+  columns:
+  - name: compound_cid
+    description: Description of compound_cid
+    tests:
+    - not_null
+    - unique
+  - name: heading
+    description: Description of heading
+    tests:
+    - not_null
+    - unique
+- name: bioassays
+  description: Model that transforms the `adme` seed into a standardized schema.
+  columns:
+  - name: compound_cid
+    description: Description of compound_cid
+    tests:
+    - not_null
+    - unique
+  - name: assay_identifier
+    description: Description of assay_identifier
+    tests:
+    - not_null
+    - unique
+- name: pubchem_tags
+  description: Model that transforms the `adme` seed into a standardized schema.
+  columns:
+  - name: compound_cid
+    description: Description of compound_cid
+    tests:
+    - not_null
+    - unique
+  - name: tag
+    description: Description of tag
+    tests:
+    - not_null
+    - unique

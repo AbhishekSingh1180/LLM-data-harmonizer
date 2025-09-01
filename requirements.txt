@@ -1,0 +1,7 @@
+pandas
+duckdb
+dbt-core
+dbt-duckdb
+chromadb
+huggingface_hub
+sentence-transformers

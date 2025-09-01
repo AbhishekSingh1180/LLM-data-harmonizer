@@ -1,0 +1,15 @@
+name: chemistry_pubchem
+version: '1.0'
+config-version: 2
+profile: chemistry_pubchem
+model-paths:
+- models
+seed-paths:
+- seeds
+models:
+  chemistry_pubchem:
+    +materialized: table
+seeds:
+  adme:
+    +materialized: table
+    +quote_columns: true

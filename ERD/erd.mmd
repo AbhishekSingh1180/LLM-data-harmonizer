@@ -1,0 +1,66 @@
+%%{init: {'theme':'default'}}%%
+erDiagram
+  proteomics_study {
+    TEXT accession
+    TEXT title
+    TEXT project_description
+    DATE submission_date
+    DATE publication_date
+    TEXT doi
+    TEXT license
+    INTEGER total_file_downloads
+  }
+
+  study_country {
+    TEXT accession
+    TEXT country
+  }
+
+  study_keyword {
+    TEXT accession
+    TEXT keyword
+  }
+
+  study_tag {
+    TEXT accession
+    TEXT tag
+  }
+
+  study_submitter {
+    TEXT accession
+    TEXT submitter_name
+    TEXT submitter_affiliation
+    TEXT submitter_email
+  }
+
+  study_pi {
+    TEXT accession
+    TEXT pi_name
+    TEXT pi_affiliation
+    TEXT pi_email
+  }
+
+  study_reference {
+    TEXT accession
+    TEXT reference_citation
+  }
+
+  study_ptm {
+    TEXT accession
+    TEXT ptm_annotation
+  }
+
+  study_organism {
+    TEXT accession
+    INTEGER taxonomy_id
+    TEXT taxonomy_name
+  }
+
+  proteomics_study ||--o{ study_country : has
+  proteomics_study ||--o{ study_keyword : has
+  proteomics_study ||--o{ study_tag : has
+  proteomics_study ||--o{ study_submitter : has
+  proteomics_study ||--o{ study_pi : has
+  proteomics_study ||--o{ study_reference : has
+  proteomics_study ||--o{ study_ptm : has
+  proteomics_study ||--o{ study_organism : has
