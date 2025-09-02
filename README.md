@@ -1,6 +1,4 @@
-# Hackathon Team Fusion Optics
-
-## Intelligent Data Schema Inference & Modeling Platform
+## Intelligent Data Schema Inference & Modeling framework
 
 An innovative solution that uses Large Language Models (LLMs) to automatically detect files, infer schemas, generate vector embeddings, and match schemas. The platform outputs dbt SQL models enriched with metadata, stores them in a data warehouse, and makes them queryable via BI tools or a chat interface.
 
@@ -216,15 +214,6 @@ The full architecture includes:
 - **Multi-Database Support**: Extending beyond ClickHouse to other database engines
 - **Advanced Lineage**: Deeper integration with data governance tools
 - **UI Dashboard**: Web interface for monitoring and management
-
-## 👥 Team
-
-Hackathon Team Fusion Optics
-### Members
-
-- Abhishek
-- Shrikar
-- Arjun
 
 ## Steps to setup:
 
