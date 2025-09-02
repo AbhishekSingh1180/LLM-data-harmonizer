@@ -64,6 +64,12 @@ def create_dbt_model(inferred_schema: Dict[str, Any]) -> None:
                     file_path = os.path.join(output_dir, 'models', sql_file)
                     with open(file_path, 'w', encoding='utf-8') as f:
                         f.write(sql_code)
+        elif filename == 'schema.yml':
+            schema_dir = os.path.join(output_dir, 'models')
+            os.makedirs(schema_dir, exist_ok=True)
+            file_path = os.path.join(schema_dir, 'schema.yml')
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(construct)
         else:
             file_path = os.path.join(output_dir, filename)
             with open(file_path, 'w', encoding='utf-8') as f:
@@ -71,4 +77,3 @@ def create_dbt_model(inferred_schema: Dict[str, Any]) -> None:
     # Call dbt_executor to run dbt commands and open docs
     from core.transformation import dbt_executor
     dbt_executor.execute_all(inferred_schema['database_name'])
-                

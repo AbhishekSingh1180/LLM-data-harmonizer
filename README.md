@@ -217,8 +217,37 @@ The full architecture includes:
 - **Advanced Lineage**: Deeper integration with data governance tools
 - **UI Dashboard**: Web interface for monitoring and management
 
+## 👥 Team
+
+Hackathon Team Fusion Optics
+### Members
+
+- Abhishek
+- Shrikar
+- Arjun
+
+## Steps to setup:
+
+- create config.cfg in core directory
+  ```
+    [inference]
+    PROVIDER=nebius
+    HF_TOKEN=<hugingface_token>
+    MODEL=openai/gpt-oss-120b
+  ```
+- run requirements.txt 
+  ```python
+    pip install -r requirements.txt
+  ```
+- run project
+  ```python 
+    python main.py 
+  ```
+
 ## 📜 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ---
+
+*This project was created during a hackathon event and represents a proof-of-concept implementation.*

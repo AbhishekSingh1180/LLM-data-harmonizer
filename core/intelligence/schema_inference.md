@@ -17,15 +17,11 @@ You will be provided with:
 **columns and type:**
     <context>
 
-**similar columns and type(in database - only for reference don't include):
-    <similarity_context>
-
 **description:**
-    *current_description:
     <description>
 
-    *similar description(in database - only for reference don't include):
-    <similarity_description>
+**similar description**(in database - only for reference don't include):
+  <similarity_description>
 
 
 ---
@@ -35,7 +31,6 @@ You will be provided with:
 From this input, you must:
 1. **Determine the logical structure of the dataset**
    - Detect potential entities and relationships.
-
 2. **Infer a fully normalized relational schema**
    - Normalize the structure to at least **3rd Normal Form (3NF)** 
    - Eliminate redundancy by breaking out separate entities into their own tables but not too on level if just one column
@@ -51,7 +46,7 @@ From this input, you must:
 
 For each inferred table:
 - **table_name**: snake_case string
-- **columns**: array of objects like `{ "name": string, "type": SQL_TYPE }`
+- **columns**: array of objects like `{ "name": string, "type": SQL_TYPE , "decription" : string }`
 - **primary_key**: one or more columns that uniquely identify each row
 - **foreign_keys**: references to other tables with their primary key if required:
 - **unique_constraints**: column(s) that must be unique but are not primary keys
@@ -72,8 +67,8 @@ Respond with a **single JSON object** structured like this:
     {
       "table_name": "table_one",
       "columns": [
-        { "name": "column_a", "type": "TEXT" },
-        { "name": "column_b", "type": "INTEGER" }
+        { "name": "column_a", "type": "TEXT" , "description", "a small description"}
+        { "name": "column_b", "type": "INTEGER" , "description", "a small description"}
       ],
       "primary_key": ["column_a"],
       "foreign_keys": [

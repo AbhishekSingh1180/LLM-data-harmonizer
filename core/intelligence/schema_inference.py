@@ -36,7 +36,7 @@ def schema_inference(data_context: dict) -> dict:
         "<domain>": str(data_context.get('domain', '')),
         "<similarity_domain>": str(data_context.get('similarity_domain', '')),
         "<context>": str(data_context.get('context', '')),
-        "<similarity_context>": str(data_context.get('similarity_context', '')),
+       # "<similarity_context>": str(data_context.get('similarity_context', '')),
         "<description>": str(data_context.get('description', '')),
         "<similarity_description>": str(data_context.get('similarity_description', ''))
     }

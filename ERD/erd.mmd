@@ -1,66 +1,57 @@
 %%{init: {'theme':'default'}}%%
 erDiagram
-  proteomics_study {
-    TEXT accession
-    TEXT title
-    TEXT project_description
-    DATE submission_date
-    DATE publication_date
-    TEXT doi
-    TEXT license
-    INTEGER total_file_downloads
+  compound {
+    INTEGER compound_cid
+    TEXT name
+    DOUBLE molecular_weight
+    TEXT molecular_formula
+    DOUBLE polar_area
+    DOUBLE complexity
+    DOUBLE xlogp
+    INTEGER heavy_atom_count
+    INTEGER h_bond_donor_count
+    INTEGER h_bond_acceptor_count
+    INTEGER rotatable_bond_count
+    TEXT inchi
+    TEXT smiles
+    TEXT inchi_key
+    TEXT iupac_name
+    DOUBLE exact_mass
+    DOUBLE monoisotopic_mass
+    INTEGER charge
+    INTEGER covalent_unit_count
+    INTEGER isotopic_atom_count
+    INTEGER total_atom_stereo_count
+    INTEGER defined_atom_stereo_count
+    INTEGER undefined_atom_stereo_count
+    INTEGER total_bond_stereo_count
+    INTEGER defined_bond_stereo_count
+    INTEGER undefined_bond_stereo_count
+    INTEGER linked_pubchem_literature_count
+    INTEGER linked_pubchem_patent_count
+    INTEGER linked_pubchem_patent_family_count
+    INTEGER annotation_type_count
+    DATE create_date
+    TEXT data_source
+    TEXT data_source_category
+    BOOLEAN tagged_by_pubchem
   }
 
-  study_country {
-    TEXT accession
-    TEXT country
+  compound_synonym {
+    INTEGER compound_cid
+    TEXT synonym
   }
 
-  study_keyword {
-    TEXT accession
-    TEXT keyword
+  compound_mesh_heading {
+    INTEGER compound_cid
+    TEXT mesh_heading
   }
 
-  study_tag {
-    TEXT accession
-    TEXT tag
+  compound_bioassay {
+    INTEGER compound_cid
+    TEXT bioassay_id
   }
 
-  study_submitter {
-    TEXT accession
-    TEXT submitter_name
-    TEXT submitter_affiliation
-    TEXT submitter_email
-  }
-
-  study_pi {
-    TEXT accession
-    TEXT pi_name
-    TEXT pi_affiliation
-    TEXT pi_email
-  }
-
-  study_reference {
-    TEXT accession
-    TEXT reference_citation
-  }
-
-  study_ptm {
-    TEXT accession
-    TEXT ptm_annotation
-  }
-
-  study_organism {
-    TEXT accession
-    INTEGER taxonomy_id
-    TEXT taxonomy_name
-  }
-
-  proteomics_study ||--o{ study_country : has
-  proteomics_study ||--o{ study_keyword : has
-  proteomics_study ||--o{ study_tag : has
-  proteomics_study ||--o{ study_submitter : has
-  proteomics_study ||--o{ study_pi : has
-  proteomics_study ||--o{ study_reference : has
-  proteomics_study ||--o{ study_ptm : has
-  proteomics_study ||--o{ study_organism : has
+  compound ||--o{ compound_synonym : has
+  compound ||--o{ compound_mesh_heading : has
+  compound ||--o{ compound_bioassay : has

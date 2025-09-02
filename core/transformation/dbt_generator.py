@@ -51,7 +51,7 @@ def generate_schema_yml(tables, mapped_column, seeds_name):
                 tests.append('unique')
             cols.append({
                 'name': col['name'],
-                'description': f"Description of {col['name']}",
+                'description': f"{col['description']}",
                 'tests': tests
             })
         models.append({
